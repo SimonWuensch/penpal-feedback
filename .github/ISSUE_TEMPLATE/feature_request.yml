@@ -1,0 +1,35 @@
+name: Feature vorschlagen
+description: Idee für eine neue Funktion oder Verbesserung
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: checkboxes
+    attributes:
+      label: Kurz vorab
+      options:
+        - label: Ich habe kurz in den bestehenden Issues gesucht — die Idee wurde noch nicht vorgeschlagen
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Was nervt dich gerade, oder was fehlt dir?
+      description: Je konkreter, desto besser.
+      placeholder: "Ich bin immer genervt, wenn ich ... muss."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Dein Vorschlag
+      description: Wie könnte das Feature aussehen oder funktionieren? Grobe Ideen sind genau so willkommen wie detaillierte.
+      placeholder: "Es wäre super, wenn man ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Zusätzlicher Kontext
+      description: Screenshots, Skizzen, Beispiele aus anderen Apps — alles was hilft.

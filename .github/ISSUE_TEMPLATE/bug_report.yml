@@ -1,0 +1,68 @@
+name: Bug melden
+description: Etwas funktioniert nicht wie erwartet
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: checkboxes
+    attributes:
+      label: Kurz vorab
+      options:
+        - label: Ich habe kurz in den bestehenden Issues gesucht — das Problem ist noch nicht gemeldet
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Was ist passiert?
+      placeholder: "Beim Klick auf X passiert Y, obwohl Z erwartet wird."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Reproduzieren
+      placeholder: |
+        1. Gehe zu ...
+        2. Klicke auf ...
+        3. Fehler erscheint
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Was hättest du erwartet?
+      placeholder: "Es sollte ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots oder Aufnahmen
+      description: Optional — aber enorm hilfreich. Einfach per Drag & Drop einfügen.
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Sonstiges
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Gerät
+      options:
+        - Desktop
+        - iPhone / iPad
+        - Android
+    validations:
+      required: true
